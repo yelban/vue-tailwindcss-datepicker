@@ -1,0 +1,44 @@
+/* @import './base.css'; */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+SC&family=Noto+Sans+TC&display=swap');
+
+@font-face {
+    font-family: 'Mabry Pro';
+    font-display: swap;
+    src: url('./fonts/Mabry-Regular-Pro.woff') format('woff');
+    src: url('./fonts/Mabry-Regular-Pro.woff2') format('woff2');
+    src: url('./fonts/Mabry-Regular-Pro.ttf') format('truetype');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.language-svg-icon {
+    width: 24px;
+    height: 24px;
+    background: url('./icons/language.svg');
+}
+
+.search-svg-icon {
+    width: 20px;
+    height: 20px;
+    background: url('./icons/search.svg');
+}
+
+.p-accordion .p-accordion-header .p-accordion-header-link {
+    color: #005087 !important;
+    background: none !important;
+    border: none !important;
+}
+
+.p-accordion .p-accordion-content {
+    font-weight: 600 !important;
+    color: #005087 !important;
+    background: none !important;
+    border: none !important;
+}
+
+.p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link {
+    color: #005087 !important;
+}

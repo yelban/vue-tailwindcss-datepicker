@@ -1,0 +1,27 @@
+[
+    {
+        "name": "First name",
+        "field": "first_name",
+        "sort": ""
+    },
+    {
+        "name": "Last name",
+        "field": "last_name",
+        "sort": ""
+    },
+    {
+        "name": "Gender",
+        "field": "gender",
+        "sort": ""
+    },
+    {
+        "name": "Birthdate",
+        "field": "birthdate",
+        "sort": ""
+    },
+    {
+        "name": "Profile",
+        "field": "profile",
+        "sort": ""
+    }
+]

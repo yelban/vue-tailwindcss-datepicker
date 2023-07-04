@@ -1,0 +1,23 @@
+{
+    "item1": {
+        "id": "item1",
+        "name": "Item 1",
+        "uri": "//rg.ru"
+    },
+    "item2": {
+        "id": "item1",
+        "name": "Item 1",
+        "list": {
+            "item1_1": {
+                "id": "item1_1",
+                "name": "Item 1_1",
+                "uri": "//rg.ru"
+            },
+            "item1_2": {
+                "id": "item1_2",
+                "name": "Item 1_2",
+                "uri": "//rg.ru"
+            }
+        }
+    }
+}
