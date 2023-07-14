@@ -42,3 +42,13 @@
 .p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link {
     color: #005087 !important;
 }
+
+.p-button {
+    background: #005087 !important;
+    border: 1px solid #005087 !important;
+}
+
+.p-checkbox .p-checkbox-box.p-highlight {
+    background: #005087 !important;
+    border-color: #005087 !important;
+}

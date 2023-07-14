@@ -77,6 +77,8 @@ const onUpload = () => {
 
 const checkBox = ref();
 
+const checkedAll = ref(false);
+
 const toastShow = useToast();
 
 const clickToast = () => {
@@ -86,6 +88,10 @@ const clickToast = () => {
         detail: 'There is a toast',
         life: 3000,
     });
+};
+
+const selectAll = function (event, i) {
+    console.log('event', event);
 };
 </script>
 
@@ -141,6 +147,7 @@ export default {
             datasetView: false,
             datasetEdit: false,
             datasetDelete: false,
+            userIds: [],
         };
     },
     computed: {
@@ -177,6 +184,11 @@ export default {
             }
             sortEl.sort = toset;
         },
+        // selectAll: (event, i) => {
+        //     console.log('event', event);
+        //     console.log('this.$refs', this.$refs);
+        //     // console.log('this.checkedAll', this.checkedAll);
+        // },
     },
 };
 </script>
@@ -549,10 +561,23 @@ export default {
                                 </div>
                             </div>
 
+                            <div v-if="checkedAll" class="p-4">
+                                <span class="p-buttonset">
+                                    <Button label="Edit" icon="pi pi-check" />
+                                    <Button label="Delete" icon="pi pi-trash" />
+                                </span>
+                            </div>
+
                             <div class="px-2">
                                 <table class="w-full border-collapse">
                                     <thead>
                                         <tr class="bg-[#FFE664] text-left">
+                                            <th class="border border-slate-100 p-3">
+                                                <Checkbox
+                                                    v-model="checkedAll"
+                                                    :binary="true"
+                                                    @change="selectAll" />
+                                            </th>
                                             <th class="border border-slate-100 p-3">#</th>
                                             <th
                                                 v-for="(th, index) in cols"
@@ -582,6 +607,10 @@ export default {
                                     <dataset-item tag="tbody">
                                         <template #default="{ row, rowIndex }">
                                             <tr class="text-zinc-600 odd:bg-[#F0F0F0]">
+                                                <td
+                                                    class="min-w-[56px] border border-slate-100 p-3">
+                                                    <Checkbox v-model="checkedAll" :binary="true" />
+                                                </td>
                                                 <td
                                                     class="min-w-[64px] border border-slate-100 p-3">
                                                     {{ rowIndex + 1 }}
