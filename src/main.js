@@ -12,6 +12,7 @@ import ToastService from 'primevue/toastservice';
 import BadgeDirective from 'primevue/badgedirective';
 
 import App from './App.vue';
+import router from './router';
 
 const app = createApp(App);
 
@@ -22,5 +23,7 @@ app.use(VueTailwindDatepicker);
 app.use(ToastService);
 
 app.directive('badge', BadgeDirective);
+
+app.use(router);
 
 app.mount('#app');
